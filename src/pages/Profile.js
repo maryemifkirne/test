@@ -20,7 +20,7 @@ const Profile = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      await axios.put('http://localhost:3000/api/user/profile', formData, {
+      await axios.put('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/user/profile', formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMessage('Profil mis à jour avec succès');
