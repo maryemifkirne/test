@@ -46,7 +46,7 @@ const Register = () => {
         password: formData.mot_de_passe
       };
       
-      const response = await axios.post('http://localhost:3000/api/auth/register', dataToSend, {
+      const response = await axios.post('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/auth/register', dataToSend, {
         headers: {
           'Content-Type': 'application/json'
         }
@@ -179,7 +179,7 @@ const Register = () => {
         </div>
         
         <button 
-          onClick={() => window.location.href = 'http://localhost:3000/api/auth/google'}
+          onClick={() => window.location.href = 'test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/auth/google'}
           className="modern-btn modern-btn-google"
         >
           <FcGoogle /> S'inscrire avec Google
