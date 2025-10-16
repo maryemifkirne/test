@@ -25,7 +25,7 @@ const AdminEncaissements = () => {
 
   const fetchEncaissements = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/admin/encaissements', {
+      const response = await axios.get('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/admin/encaissements', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setEncaissements(response.data);
@@ -38,7 +38,7 @@ const AdminEncaissements = () => {
   };
 
   const downloadRecu = (filename) => {
-    window.open(`http://localhost:3000/api/admin/recu/${filename}`, '_blank');
+    window.open(`test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/admin/recu/${filename}`, '_blank');
   };
 
   const formatDate = (dateString) => {
