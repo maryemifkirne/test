@@ -28,7 +28,7 @@ const CreateCase = () => {
   const onSubmit = async (data) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:3000/api/cases', data, {
+      await axios.post('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/cases', data, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setSuccess('Dossier créé avec succès');
