@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://test1-navy-omega.vercel.app/';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app';
 
 const api = axios.create({
   baseURL: `${API_BASE_URL}/api`,
