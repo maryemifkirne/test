@@ -22,7 +22,7 @@ const AdminDashboard = () => {
 
   const fetchStats = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/admin/stats', {
+      const response = await axios.get('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/admin/stats', {
         headers: { Authorization: `Bearer ${token}` }
       });
       console.log('Stats reçues:', response.data);
@@ -35,7 +35,7 @@ const AdminDashboard = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/admin/users', {
+      const response = await axios.get('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/admin/users', {
         headers: { Authorization: `Bearer ${token}` }
       });
       console.log('Utilisateurs reçus:', response.data);
