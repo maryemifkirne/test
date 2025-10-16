@@ -14,7 +14,7 @@ const Services = () => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/public/services');
+        const response = await axios.get('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/public/services');
         setServices(response.data);
       } catch (error) {
         console.error('Erreur lors du chargement des services:', error);
