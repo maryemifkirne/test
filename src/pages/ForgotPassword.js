@@ -14,7 +14,7 @@ const ForgotPassword = () => {
     setLoading(true);
     
     try {
-      await axios.post('http://localhost:3000/api/auth/forgot-password', { email });
+      await axios.post('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/auth/forgot-password', { email });
       success('📧 Instructions envoyées par email !');
       setEmail('');
     } catch (err) {
