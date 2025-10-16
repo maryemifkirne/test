@@ -36,9 +36,9 @@ const UserDashboard = () => {
       console.log('Fetching data for user:', user.id);
 
       const [achatsRes, formationsRes, certificatsRes] = await Promise.all([
-        axios.get('http://localhost:3000/api/user/mes-achats', { headers }),
-        axios.get('http://localhost:3000/api/user/mes-formations', { headers }),
-        axios.get('http://localhost:3000/api/user/mes-certificats', { headers })
+        axios.get('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/user/mes-achats', { headers }),
+        axios.get('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/user/mes-formations', { headers }),
+        axios.get('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/user/mes-certificats', { headers })
       ]);
 
       console.log('Achats:', achatsRes.data);
@@ -58,7 +58,7 @@ const UserDashboard = () => {
 
   const marquerReglementLu = async (formationId) => {
     try {
-      await axios.post(`http://localhost:3000/api/user/formation/${formationId}/reglement`, {}, {
+      await axios.post(`test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/user/formation/${formationId}/reglement`, {}, {
         headers: { 
           Authorization: `Bearer ${token}`,
           'user-id': user.id 
@@ -72,7 +72,7 @@ const UserDashboard = () => {
 
   const confirmerPresence = async (formationId) => {
     try {
-      const response = await axios.post(`http://localhost:3000/api/user/formation/${formationId}/presence`, {}, {
+      const response = await axios.post(`test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/user/formation/${formationId}/presence`, {}, {
         headers: { 
           Authorization: `Bearer ${token}`,
           'user-id': user.id 
@@ -341,7 +341,7 @@ const UserDashboard = () => {
                         <div>
                           {certificat.statut === 'valide' && (
                             <button
-                              onClick={() => window.open(`http://localhost:3000/api/admin/certificat-pdf/${certificat.id}`, '_blank')}
+                              onClick={() => window.open(`test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/admin/certificat-pdf/${certificat.id}`, '_blank')}
                               style={{
                                 background: 'var(--primary-blue)',
                                 color: 'white',
