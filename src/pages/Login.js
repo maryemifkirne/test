@@ -28,7 +28,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/auth/login', formData);
+      const response = await axios.post('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/auth/login', formData);
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
       
@@ -104,7 +104,7 @@ const Login = () => {
         </div>
         
         <button 
-          onClick={() => window.location.href = 'http://localhost:3000/api/auth/google'}
+          onClick={() => window.location.href = 'test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/auth/google'}
           className="modern-btn modern-btn-google"
         >
           <FcGoogle /> Continuer avec Google
