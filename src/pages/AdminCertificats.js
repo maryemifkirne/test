@@ -22,7 +22,7 @@ const AdminCertificats = () => {
 
   const fetchCertificats = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/admin/certificats', {
+      const response = await axios.get('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/admin/certificats', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setCertificats(response.data);
@@ -35,7 +35,7 @@ const AdminCertificats = () => {
 
   const validerCertificat = async (id) => {
     try {
-      await axios.put(`http://localhost:3000/api/admin/certificats/${id}/valider`, {}, {
+      await axios.put(`test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/admin/certificats/${id}/valider`, {}, {
         headers: { Authorization: `Bearer ${token}` }
       });
       fetchCertificats();
@@ -189,7 +189,7 @@ const AdminCertificats = () => {
                             </button>
                           )}
                           <button
-                            onClick={() => window.open(`http://localhost:3000/api/admin/certificat-pdf/${certificat.id}`, '_blank')}
+                            onClick={() => window.open(`test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/admin/certificat-pdf/${certificat.id}`, '_blank')}
                             style={{
                               background: 'var(--primary-blue)',
                               color: 'white',
