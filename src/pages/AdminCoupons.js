@@ -31,7 +31,7 @@ const AdminCoupons = () => {
 
   const fetchCoupons = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/coupons/admin/list');
+      const response = await axios.get('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/coupons/admin/list');
       setCoupons(response.data);
     } catch (error) {
       console.error('Erreur coupons:', error);
@@ -41,7 +41,7 @@ const AdminCoupons = () => {
   const createCoupon = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/api/coupons/create', formData);
+      await axios.post('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/coupons/create', formData);
       setShowForm(false);
       setFormData({
         code: '',
