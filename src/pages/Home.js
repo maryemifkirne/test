@@ -16,7 +16,7 @@ const Home = () => {
 
   const fetchFormations = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/public/formations');
+      const response = await axios.get('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/public/formations');
       setFormations(response.data.slice(0, 3));
     } catch (error) {
       console.error('Erreur:', error);
@@ -25,7 +25,7 @@ const Home = () => {
 
   const fetchTestimonials = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/public/testimonials');
+      const response = await axios.get('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/public/testimonials');
       setTestimonials(response.data);
     } catch (error) {
       console.error('Erreur:', error);
