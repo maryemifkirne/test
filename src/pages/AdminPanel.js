@@ -32,7 +32,7 @@ const AdminPanel = ({ activeTab: initialTab = 'services' }) => {
 
   const fetchServices = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/admin/services', {
+      const response = await axios.get('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/admin/services', {
         headers: { Authorization: `Bearer ${token}` }
       });
       console.log('Services reçus:', response.data);
@@ -45,7 +45,7 @@ const AdminPanel = ({ activeTab: initialTab = 'services' }) => {
 
   const fetchFormations = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/admin/formations', {
+      const response = await axios.get('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/admin/formations', {
         headers: { Authorization: `Bearer ${token}` }
       });
       console.log('Formations reçues:', response.data);
@@ -61,11 +61,11 @@ const AdminPanel = ({ activeTab: initialTab = 'services' }) => {
     try {
       const url = activeTab === 'services' ? 'services' : 'formations';
       if (editingItem) {
-        await axios.put(`http://localhost:3000/api/admin/${url}/${editingItem.id}`, formData, {
+        await axios.put(`test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/admin/${url}/${editingItem.id}`, formData, {
           headers: { Authorization: `Bearer ${token}` }
         });
       } else {
-        await axios.post(`http://localhost:3000/api/admin/${url}`, formData, {
+        await axios.post(`test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/admin/${url}`, formData, {
           headers: { Authorization: `Bearer ${token}` }
         });
       }
@@ -80,7 +80,7 @@ const AdminPanel = ({ activeTab: initialTab = 'services' }) => {
   const handleDelete = async (id) => {
     try {
       const url = activeTab === 'services' ? 'services' : 'formations';
-      await axios.delete(`http://localhost:3000/api/admin/${url}/${id}`, {
+      await axios.delete(`test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/admin/${url}/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       activeTab === 'services' ? fetchServices() : fetchFormations();
