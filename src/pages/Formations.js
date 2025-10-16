@@ -14,7 +14,7 @@ const Formations = () => {
   useEffect(() => {
     const fetchFormations = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/public/formations');
+        const response = await axios.get('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/public/formations');
         setFormations(response.data);
       } catch (error) {
         console.error('Erreur lors du chargement des formations:', error);
