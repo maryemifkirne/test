@@ -30,7 +30,7 @@ const AdminPresence = () => {
 
   const fetchSessions = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/presence/sessions/active');
+      const response = await axios.get('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/presence/sessions/active');
       setSessions(response.data);
     } catch (error) {
       console.error('Erreur sessions:', error);
@@ -40,7 +40,7 @@ const AdminPresence = () => {
   const createSession = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/presence/session/create', formData);
+      const response = await axios.post('test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/presence/session/create', formData);
       setShowCreateForm(false);
       setFormData({ formation_id: 1, date_session: '', heure_debut: '', heure_fin: '' });
       fetchSessions();
@@ -65,7 +65,7 @@ const AdminPresence = () => {
 
   const viewPresences = async (sessionId) => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/presence/session/${sessionId}/presences`);
+      const response = await axios.get(`test-8iwign9nb-maryems-projects-c9d6afd2.vercel.app/api/presence/session/${sessionId}/presences`);
       setPresences(response.data);
       setSelectedSession(sessionId);
     } catch (error) {
